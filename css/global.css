@@ -1,0 +1,16 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    color: #1E3246;
+    background-color: #fff;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: 'Ubuntu', sans-serif;
+}

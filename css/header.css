@@ -1,0 +1,40 @@
+.headline {
+    color: #fff;
+    background-color: #1e3246;
+    border-radius: 25px;
+    padding: 5px 25px;
+    font-weight: 300;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 0%;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.header__link {
+    width: 20%;
+    border-radius: 0;
+    padding: 0px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.header__link--external {
+    background-color: #b0c4de;
+    font-size: 24px;
+}
+
+.header__link:hover {
+    background-color: #fff;
+}
+
+.header__link:active {
+    background-color: darkgray;
+}
+
+.header__link:focus {
+    outline: 1px solid currentColor;
+}
+
+.header__linkImage {
+    width: 100%;
+}
