@@ -1,6 +1,6 @@
 # CNC-parameters-calc
 
-## Simple calculator of cutting parameters for CNC and traditional machininst.
+## Simple calculator of cutting parameters for CNC and traditional machininsts.
 
 At the moment it contain  
 1. drilling/milling:
