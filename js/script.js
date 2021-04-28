@@ -48,16 +48,16 @@ form3.addEventListener("input", (event) => {
     if (tooth.checked) {
         feedElement = rotationInput3.value * feedForTooth.value * toothNumber.value;
         feedForRev.disabled = true;
-        feedForRev.value = ("");
+        feedForRev.value = "";
         feedForTooth.disabled = false;
         toothNumber.disabled = false;
     } else if (rev.checked) {
         feedElement = rotationInput3.value * feedForRev.value;
         feedForRev.disabled = false;
         feedForTooth.disabled = true;
-        feedForTooth.value = ("");
+        feedForTooth.value = "";
         toothNumber.disabled = true;
-        toothNumber.value = ("");
+        toothNumber.value = "";
     }
 })
 
