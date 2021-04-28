@@ -24,7 +24,7 @@ let rotationResult2 = document.querySelector(".js-rotationResult2");
 form2.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    let rotElement  ;
+    let rotElement;
 
     rotElement = speedInput2.value * 1000 / Math.PI / diameterInput2.value;
 
@@ -44,24 +44,20 @@ let tooth = document.querySelector(".js-tooth");
 let feedElement;
 
 form3.addEventListener("input", (event) => {
-    
+
     if (tooth.checked) {
         feedElement = rotationInput3.value * feedForTooth.value * toothNumber.value;
-        feedForRev.setAttribute("disabled", "");
+        feedForRev.disabled = true;
         feedForRev.value = ("");
-        feedForTooth.toggleAttribute("disabled", "");
-        toothNumber.toggleAttribute("disabled", "");
-        tooth.setAttribute("checked", "");
-        rev.toggleAttribute("checked", "");
+        feedForTooth.disabled = false;
+        toothNumber.disabled = false;
     } else if (rev.checked) {
         feedElement = rotationInput3.value * feedForRev.value;
-        feedForRev.toggleAttribute("disabled", "");
-        feedForTooth.setAttribute("disabled", "");
+        feedForRev.disabled = false;
+        feedForTooth.disabled = true;
         feedForTooth.value = ("");
-        toothNumber.setAttribute("disabled", "");
+        toothNumber.disabled = true;
         toothNumber.value = ("");
-        rev.setAttribute("checked", "");
-        tooth.toggleAttribute("checked", "");
     }
 })
 
