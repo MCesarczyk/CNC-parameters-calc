@@ -10,7 +10,7 @@ formSpeed.addEventListener("submit", (event) => {
 
     let speedElement;
 
-    speedElement = (Math.PI * diameterSpeed.value * rotationSpeed.value / 1000);
+    speedElement = Math.PI * diameterSpeed.value * rotationSpeed.value / 1000;
 
     speedSpeed.value = speedElement.toFixed(2);
 
@@ -26,7 +26,7 @@ formRot.addEventListener("submit", (event) => {
 
     let rotElement;
 
-    rotElement = (speedRot.value * 1000) / (Math.PI * diameterRot.value);
+    rotElement = speedRot.value * 1000 / Math.PI * diameterRot.value;
 
     rotationRot.value = rotElement.toFixed(2);
 
