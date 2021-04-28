@@ -1,34 +1,34 @@
 console.log("Dzieńdoberek :)");
 
-let formSpeed = document.querySelector(".js-form1");
-let diameterSpeed = document.querySelector(".js-diameterInput1");
-let rotationSpeed = document.querySelector(".js-rotationInput1");
-let speedSpeed = document.querySelector(".js-speedResult1");
+let form1 = document.querySelector(".js-form1");
+let diameterInput1 = document.querySelector(".js-diameterInput1");
+let rotationInput1 = document.querySelector(".js-rotationInput1");
+let speedResult1 = document.querySelector(".js-speedResult1");
 
-formSpeed.addEventListener("submit", (event) => {
+form1.addEventListener("submit", (event) => {
     event.preventDefault();
 
     let speedElement;
 
-    speedElement = Math.PI * diameterSpeed.value * rotationSpeed.value / 1000;
+    speedElement = Math.PI * diameterInput1.value * rotationInput1.value / 1000;
 
-    speedSpeed.value = speedElement.toFixed(2);
+    speedResult1.value = speedElement.toFixed(2);
 
 })
 
-let formRot = document.querySelector(".js-formRot");
-let diameterRot = document.querySelector(".js-diameterRot");
-let rotationRot = document.querySelector(".js-rotationRot");
-let speedRot = document.querySelector(".js-speedRot");
+let form2 = document.querySelector(".js-form2");
+let diameterInput2 = document.querySelector(".js-diameterInput2");
+let speedInput2 = document.querySelector(".js-speedInput2");
+let rotationResult2 = document.querySelector(".js-rotationResult2");
 
-formRot.addEventListener("submit", (event) => {
+form2.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    let rotElement;
+    let rotElement  ;
 
-    rotElement = speedRot.value * 1000 / Math.PI * diameterRot.value;
+    rotElement = speedInput2.value * 1000 / Math.PI / diameterInput2.value;
 
-    rotationRot.value = rotElement.toFixed(2);
+    rotationResult2.value = rotElement.toFixed(2);
 
 })
 
