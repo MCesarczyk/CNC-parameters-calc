@@ -1,9 +1,9 @@
 console.log("Dzieńdoberek :)");
 
-let formSpeed = document.querySelector(".js-formSpeed");
-let diameterSpeed = document.querySelector(".js-diameterSpeed");
-let rotationSpeed = document.querySelector(".js-rotationSpeed");
-let speedSpeed = document.querySelector(".js-speedSpeed");
+let formSpeed = document.querySelector(".js-form1");
+let diameterSpeed = document.querySelector(".js-diameterInput1");
+let rotationSpeed = document.querySelector(".js-rotationInput1");
+let speedSpeed = document.querySelector(".js-speedResult1");
 
 formSpeed.addEventListener("submit", (event) => {
     event.preventDefault();
