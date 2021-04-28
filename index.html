@@ -103,14 +103,14 @@
       </div>
 
       <div class="form__container">
-        <form class="form js-formFeed">
+        <form class="form js-form3">
           <fieldset class="form__fieldset">
             <legend class="form__legend">Wielkość posuwu liniowego</legend>
             <div class="form__innerContainer">
               <p class="form__paragraph">
                 <label class="form__label">
                   <span class="form__labelInnerText"> n [obr/min] : </span><input type="number" min="1" step="1"
-                    placeholder=" obroty wrzeciona " required class="form__input js-rotationFeed">
+                    placeholder=" obroty wrzeciona " required class="form__input js-rotationInput3">
                 </label>
               </p>
               <ul class="form__list">
@@ -119,25 +119,25 @@
                       class="js-rev" checked> f<span class="form__sub">obr</span>
                     [mm/obr]
                     : </span><input type="number" min="0.01" step="0.01" required placeholder=" posuw na obrót "
-                    class="form__input form__input--feedTurn js-feedTurn">
+                    class="form__input form__input--feedForRev js-feedForRev">
                 </li>
                 <li class="form__listItem">
                   <span class="form__labelInnerText form__labelInnerText--radio"> <input type="radio" name="feedType"
                       class="js-tooth"> f<span class="form__sub">z</span> [mm] : </span><input type="number" min="0.01"
                     step="0.01" required disabled placeholder=" posuw na ząb "
-                    class="form__input form__input--feedTooth js-feedTooth">
+                    class="form__input form__input--feedForTooth js-feedForTooth">
                 </li>
               </ul>
               <p class="form__paragraph">
                 <label class="form__label">
                   <span class="form__labelInnerText"> z : </span><input type="number" min="1" step="1" required
-                    class="form__input form__input--feedTooth js-toothNumber" placeholder=" ilość zębów " disabled>
+                    class="form__input form__input--feedForTooth js-toothNumber" placeholder=" ilość zębów " disabled>
                 </label>
               </p>
               <p class="form__paragraph">
                 <label class="form__label">
                   <span class="form__labelInnerText"> f [mm/min] : </span><input readonly placeholder=" wynik "
-                    class="form__input js-feedFeed">
+                    class="form__input js-feedResult3">
                 </label>
               </p>
             </div>

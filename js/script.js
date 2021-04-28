@@ -32,34 +32,32 @@ form2.addEventListener("submit", (event) => {
 
 })
 
-let formFeed = document.querySelector(".js-formFeed");
-let rotationFeed = document.querySelector(".js-rotationFeed");
-let feedTurn = document.querySelector(".js-feedTurn");
-let feedTooth = document.querySelector(".js-feedTooth");
+let form3 = document.querySelector(".js-form3");
+let rotationInput3 = document.querySelector(".js-rotationInput3");
+let feedForRev = document.querySelector(".js-feedForRev");
+let feedForTooth = document.querySelector(".js-feedForTooth");
 let toothNumber = document.querySelector(".js-toothNumber");
-let feedFeed = document.querySelector(".js-feedFeed");
+let feedResult3 = document.querySelector(".js-feedResult3");
 
 let rev = document.querySelector(".js-rev");
 let tooth = document.querySelector(".js-tooth");
-let feedFeedVar;
+let feedElement;
 
-formFeed.addEventListener("input", (event) => {
-    event.preventDefault();
-
-
+form3.addEventListener("input", (event) => {
+    
     if (tooth.checked) {
-        feedFeedVar = rotationFeed.value * feedTooth.value * toothNumber.value;
-        feedTurn.setAttribute("disabled", "");
-        feedTurn.value = ("");
-        feedTooth.toggleAttribute("disabled", "");
+        feedElement = rotationInput3.value * feedForTooth.value * toothNumber.value;
+        feedForRev.setAttribute("disabled", "");
+        feedForRev.value = ("");
+        feedForTooth.toggleAttribute("disabled", "");
         toothNumber.toggleAttribute("disabled", "");
         tooth.setAttribute("checked", "");
         rev.toggleAttribute("checked", "");
     } else if (rev.checked) {
-        feedFeedVar = rotationFeed.value * feedTurn.value;
-        feedTurn.toggleAttribute("disabled", "");
-        feedTooth.setAttribute("disabled", "");
-        feedTooth.value = ("");
+        feedElement = rotationInput3.value * feedForRev.value;
+        feedForRev.toggleAttribute("disabled", "");
+        feedForTooth.setAttribute("disabled", "");
+        feedForTooth.value = ("");
         toothNumber.setAttribute("disabled", "");
         toothNumber.value = ("");
         rev.setAttribute("checked", "");
@@ -67,7 +65,7 @@ formFeed.addEventListener("input", (event) => {
     }
 })
 
-formFeed.addEventListener("submit", (event) => {
+form3.addEventListener("submit", (event) => {
     event.preventDefault();
-    feedFeed.value = feedFeedVar;
+    feedResult3.value = feedElement;
 })
