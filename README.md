@@ -2,7 +2,11 @@
 
 ## Simple calculator of cutting parameters for CNC and traditional machininsts.
 
-At the moment it contain  
+### Demo:
+
+https://mcesarczyk.github.io/CNC-parameters-calc/
+
+### At the moment it contain  
 1. drilling/milling:
  - cutting speed
  - tool rotational speed
