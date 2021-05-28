@@ -16,157 +16,133 @@
   <link href="css/header.css" rel=stylesheet>
   <link href="css/section.css" rel=stylesheet>
   <link href="css/form.css" rel=stylesheet>
+  <link href="css/label.css" rel=stylesheet>
+  <link href="css/button.css" rel=stylesheet>
   <link href="css/footer.css" rel=stylesheet>
   <script defer src="js/script.js"></script>
   <title>Kalkulator</title>
-  <meta property="og:title" content="Cutting parameters calculator"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://mcesarczyk.github.io/CNC-parameters-calc/"/>
-  <meta property="og:image" content="https://www.bbntimes.com/images/CNC.jpg"/>
-  <link rel="icon" href="images/CNC_fav.png"/>
+  <meta property="og:title" content="Cutting parameters calculator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mcesarczyk.github.io/CNC-parameters-calc/" />
+  <meta property="og:image" content="https://www.bbntimes.com/images/CNC.jpg" />
+  <link rel="icon" href="images/CNC_fav.png" />
 </head>
 
 <body class="body">
   <header class="header" id="start">
-    <h1 class="headline">Kalkulator obróbki skrawaniem</h1>
+    <h1 class="header__headline">Kalkulator obróbki skrawaniem</h1>
   </header>
 
   <main>
     <section class="section">
-      <h2 class="section__subHeader">Frezowanie/wiercenie</h2>
-      <div class="form__container">
-        <form class="form js-form1">
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">Liniowa prędkość skrawania</legend>
-            <div class="form__innerContainer">
-              <p class="form__paragraph">
-                <label class="form__label">
-                  <span class="form__labelInnerText"> D [mm] : </span><input type="number" min="0.0001" step="0.0001"
-                    placeholder=" średnica narzędzia " required autofocus class="form__input js-diameterInput1">
-                </label>
-              </p>
-              <p class="form__paragraph">
-                <label class="form__label">
-                  <span class="form__labelInnerText"> n [obr/min] : </span><input type="number" min="1" step="1"
-                    placeholder=" obroty wrzeciona " required class="form__input js-rotationInput1">
-                </label>
-              </p>
-              <p class="form__paragraph">
-                <label class="form__label">
-                  <span class="form__labelInnerText"> V<span class="form__sub">c</span> [m/min] : </span><input readonly
-                    placeholder=" wynik " class="form__input js-speedResult1">
-                </label>
-              </p>
-            </div>
-            <p class="form__buttonContainer">
-              <button class="form__button" type="submit">
-                Oblicz
-              </button>
-              <button class="form__button" type="reset">
-                Reset
-              </button>
-            </p>
-          </fieldset>
-        </form>
-      </div>
+      <h2 class="section__header">Frezowanie/wiercenie</h2>
 
-      <div class="form__container">
-        <form class="form js-form2">
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">Prędkość obrotowa narzędzia</legend>
-            <div class="form__innerContainer">
-              <p class="form__paragraph">
-                <label class="form__label">
-                  <span class="form__labelInnerText"> D [mm] : </span><input type="number" min="0.0001" step="0.0001"
-                    placeholder=" średnica narzędzia " required class="form__input js-diameterInput2">
-                </label>
-              </p>
-              <p class="form__paragraph">
-                <label class="form__label">
-                  <span class="form__labelInnerText"> V<span class="form__sub">c</span> [m/min] : </span><input
-                    type="number" min="1" step="1" placeholder=" prędkość liniowa " required
-                    class="form__input js-speedInput2">
-                </label>
-              </p>
-              <p class="form__paragraph">
-                <label class="form__label">
-                  <span class="form__labelInnerText"> n<span class="form__sub">obr</span> [obr/min] : </span><input
-                    readonly placeholder=" wynik " class="form__input js-rotationResult2">
-                </label>
-              </p>
-            </div>
-            <p class="form__buttonContainer">
-              <button class="form__button" type="submit">
-                Oblicz
-              </button>
-              <button class="form__button" type="reset">
-                Reset
-              </button>
-            </p>
-          </fieldset>
-        </form>
-      </div>
+      <form class="form js-form1">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Liniowa prędkość skrawania</legend>
+          <div class="form__container">
+            <label class="label">
+              <span class="labelInnerText"> D [mm] : </span><input type="number" min="0.0001" step="0.0001"
+                placeholder=" średnica narzędzia " required autofocus class="label__input js-diameterInput1">
+            </label>
+            <label class="label">
+              <span class="labelInnerText"> n [obr/min] : </span><input type="number" min="1" step="1"
+                placeholder=" obroty wrzeciona " required class="label__input js-rotationInput1">
+            </label>
+            <label class="label">
+              <span class="labelInnerText"> V<span class="labelSub">c</span> [m/min] : </span><input
+                readonly placeholder=" wynik " class="label__input js-speedResult1">
+            </label>
+          </div>
+          <div class="form__buttons">
+            <button class="button" type="submit">
+              Oblicz
+            </button>
+            <button class="button" type="reset">
+              Reset
+            </button>
+          </div>
+        </fieldset>
+      </form>
 
-      <div class="form__container">
-        <form class="form js-form3">
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">Wielkość posuwu liniowego</legend>
-            <div class="form__innerContainer">
-              <p class="form__paragraph">
-                <label class="form__label">
-                  <span class="form__labelInnerText"> n [obr/min] : </span><input type="number" min="1" step="1"
-                    placeholder=" obroty wrzeciona " required class="form__input js-rotationInput3">
+      <form class="form js-form2">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Prędkość obrotowa narzędzia</legend>
+          <div class="form__container">
+            <label class="label">
+              <span class="labelInnerText"> D [mm] : </span><input type="number" min="0.0001" step="0.0001"
+                placeholder=" średnica narzędzia " required class="label__input js-diameterInput2">
+            </label>
+            <label class="label">
+              <span class="labelInnerText"> V<span class="labelSub">c</span> [m/min] : </span><input
+                type="number" min="1" step="1" placeholder=" prędkość liniowa " required
+                class="label__input js-speedInput2">
+            </label>
+            <label class="label">
+              <span class="labelInnerText"> n<span class="labelSub">obr</span> [obr/min] : </span><input
+                readonly placeholder=" wynik " class="label__input js-rotationResult2">
+            </label>
+          </div>
+          <div class="form__buttons">
+            <button class="button" type="submit">
+              Oblicz
+            </button>
+            <button class="button" type="reset">
+              Reset
+            </button>
+          </div>
+        </fieldset>
+      </form>
+
+      <form class="form js-form3">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Wielkość posuwu liniowego</legend>
+          <div class="form__container">
+            <label class="label">
+              <span class="labelInnerText"> n [obr/min] : </span><input type="number" min="1" step="1"
+                placeholder=" obroty wrzeciona " required class="label__input js-rotationInput3">
+            </label>
+            <label class="label">
+              <span class="labelInnerText"> <input type="radio" name="feedType" id="FPR" class="js-rev" checked>
+                <label for="FPR">
+                  f<span class="labelSub">obr</span>[mm/obr]:
                 </label>
-              </p>
-              <ul class="form__list">
-                <li class="form__listItem">
-                  <span class="form__labelInnerText form__labelInnerText--radio"> <input type="radio" name="feedType"
-                      id="FPR" class="js-rev" checked>
-                    <label for="FPR">
-                      f<span class="form__sub">obr</span>[mm/obr]:
-                    </label>
-                  </span><input type="number" min="0.01" step="0.01" required placeholder=" posuw na obrót "
-                    class="form__input js-feedForRev">
-                </li>
-                <li class="form__listItem">
-                  <span class="form__labelInnerText form__labelInnerText--radio"> <input type="radio" name="feedType"
-                      id="FPT" class="js-tooth">
-                    <label for="FPT">
-                      f<span class="form__sub">z</span> [mm] :
-                    </label>
-                  </span><input type="number" min="0.01" step="0.01" required disabled placeholder=" posuw na ząb "
-                    class="form__input js-feedForTooth">
-                </li>
-              </ul>
-              <p class="form__paragraph">
-                <label class="form__label">
-                  <span class="form__labelInnerText"> z : </span><input type="number" min="1" step="1" required
-                    class="form__input js-toothNumber" placeholder=" ilość zębów " disabled>
+              </span><input type="number" min="0.01" step="0.01" required placeholder=" posuw na obrót "
+                class="label__input js-feedForRev">
+            </label>
+            <label class="label">
+              <span class="labelInnerText"> <input type="radio" name="feedType" id="FPT" class="js-tooth">
+                <label for="FPT">
+                  f<span class="labelSub">z</span> [mm] :
                 </label>
-              </p>
-              <p class="form__paragraph">
-                <label class="form__label">
-                  <span class="form__labelInnerText"> f [mm/min] : </span><input readonly placeholder=" wynik "
-                    class="form__input js-feedResult3">
-                </label>
-              </p>
-            </div>
-            <p class="form__buttonContainer">
-              <button class="form__button" type="submit">
-                Oblicz
-              </button>
-              <button class="form__button" type="reset">
-                Reset
-              </button>
-            </p>
-          </fieldset>
-        </form>
-      </div>
+              </span><input type="number" min="0.01" step="0.01" required disabled placeholder=" posuw na ząb "
+                class="label__input js-feedForTooth">
+            </label>
+            <label class="label">
+              <span class="labelInnerText"> z : </span><input type="number" min="1" step="1" required
+                class="label__input js-toothNumber" placeholder=" ilość zębów " disabled>
+            </label>
+            <label class="label">
+              <span class="labelInnerText"> f [mm/min] : </span><input readonly placeholder=" wynik "
+                class="label__input js-feedResult3">
+            </label>
+          </div>
+          <div class="form__buttons">
+            <button class="button" type="submit">
+              Oblicz
+            </button>
+            <button class="button" type="reset">
+              Reset
+            </button>
+          </div>
+        </fieldset>
+      </form>
+
     </section>
   </main>
 
   <footer class="footer">
-    <p class="footer__paragraph">
+    <p class="footer__content">
       &copy; by Michał Cesarczyk
     </p>
     <p class="footer__annotation">
