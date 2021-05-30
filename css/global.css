@@ -10,6 +10,7 @@ html {
     color: #1E3246;
     background-color: #fff;
     max-width: 1000px;
+    min-width: 320px;
     margin: 0 auto;
     line-height: 1.5;
     font-family: 'Ubuntu', sans-serif;

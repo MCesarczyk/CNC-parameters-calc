@@ -2,91 +2,23 @@
     color: #1e3246;
 }
 
-.form__sub {
-    vertical-align: sub;
-    font-size: 0.7em;
-    margin-right: 0.15em;
+.form__legend {
+    text-align: center;
 }
 
 .form__fieldset {
     border-radius: 20px;
 }
 
-.form__innerContainer {
-    text-align: center;
+.form__container {
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-.form__legend {
-    text-align: center;
-}
-
-.form__label {
-    width: 250px;
-    text-align: right;
-}
-
-.form__labelInnerText {
-    text-align: right;
-    width: 234px;
-    display: inline-block;
-    margin: 0 5px;
-}
-
-.form__labelInnerText--radio {
-    width: 195px;
-}
-
-.form__input {
-    display: inline-block;
-    margin: 0 20px;
-    border: solid 1px #1e3246;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-.form__input:invalid {
-    background-color: beige;
-}
-
-.form__input:disabled {
-    background-color: #ddd;
-}
-
-.form__buttonContainer {
-    text-align: center;
-}
-
-.form__button {
-    color: #fff;
-    background-color: #1e3246;
-    border: solid #1e3246;
-    width: 40%;
-    margin: 0 10px;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.form__button:hover {
-    background-color: #4b5a69;
-}
-
-.form__button:active {
-    background-color: #788291;
-}
-
-.form__button:focus {
-    border: solid #dc3223;
-}
-
-.form__list {
-    list-style: none;
-    margin: 0px;
-}
-
-.form__paragraph {
-    margin: 8px;
-}
-
-.form__listItem {
-    margin: 8px;
+.form__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
