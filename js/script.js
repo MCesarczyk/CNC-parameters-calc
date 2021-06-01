@@ -58,12 +58,12 @@
         feedResult.value = feedElement;
     };
 
-    const diameterTable = ["-", 3, 4, 5, 6, 8, 10, 12];
-    const pitchTable = ["-", 0.5, 0.7, 0.8, 1, 1.25, 1.5, 1.75];
+    const diameterTable = ["-", 3, 4, 5, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 27, 30, 33, 36, 39, 42, 45, 48];
+    const pitchTable = ["-", 0.5, 0.7, 0.8, 1, 1.25, 1.5, 1.75, 2, 2.5, 3, 3.5, 4, 4.5, 5];
 
 
     const createTapDiameterList = () => {
-        const optionList = document.getElementById("tapDiameter").options;
+        const optionList = document.querySelector(".js-tapDiameter").options;
         diameterTable.forEach(option =>
             optionList.add(
                 new Option(option)
@@ -72,7 +72,7 @@
     };
 
     const createPitchList = () => {
-        const optionList = document.getElementById("pitch").options;
+        const optionList = document.querySelector(".js-pitch").options;
         pitchTable.forEach(option =>
             optionList.add(
                 new Option(option)
@@ -82,7 +82,7 @@
 
     const form4equation = () => {
         const rotationInput = document.querySelector(".js-rotationInput4").value;
-        const pitch = document.getElementById("pitch").value;
+        const pitch = document.querySelector(".js-pitch").value;
         if (pitch === "-") {
             return feedElement = "wybierz skok";
         }
