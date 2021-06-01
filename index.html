@@ -50,8 +50,8 @@
                 placeholder=" obroty wrzeciona " required class="label__input js-rotationInput1">
             </label>
             <label class="label">
-              <span class="labelInnerText"> V<span class="labelSub">c</span> [m/min] : </span><input
-                readonly placeholder=" wynik " class="label__input js-speedResult1">
+              <span class="labelInnerText"> V<span class="labelSub">c</span> [m/min] : </span><input readonly
+                placeholder=" wynik " class="label__input js-speedResult1">
             </label>
           </div>
           <div class="form__buttons">
@@ -74,13 +74,12 @@
                 placeholder=" średnica narzędzia " required class="label__input js-diameterInput2">
             </label>
             <label class="label">
-              <span class="labelInnerText"> V<span class="labelSub">c</span> [m/min] : </span><input
-                type="number" min="1" step="1" placeholder=" prędkość liniowa " required
-                class="label__input js-speedInput2">
+              <span class="labelInnerText"> V<span class="labelSub">c</span> [m/min] : </span><input type="number"
+                min="1" step="1" placeholder=" prędkość liniowa " required class="label__input js-speedInput2">
             </label>
             <label class="label">
-              <span class="labelInnerText"> n<span class="labelSub">obr</span> [obr/min] : </span><input
-                readonly placeholder=" wynik " class="label__input js-rotationResult2">
+              <span class="labelInnerText"> n<span class="labelSub">obr</span> [obr/min] : </span><input readonly
+                placeholder=" wynik " class="label__input js-rotationResult2">
             </label>
           </div>
           <div class="form__buttons">
@@ -125,6 +124,45 @@
             <label class="label">
               <span class="labelInnerText"> f [mm/min] : </span><input readonly placeholder=" wynik "
                 class="label__input js-feedResult3">
+            </label>
+          </div>
+          <div class="form__buttons">
+            <button class="button" type="submit">
+              Oblicz
+            </button>
+            <button class="button" type="reset">
+              Reset
+            </button>
+          </div>
+        </fieldset>
+      </form>
+
+    </section>
+
+    <section class="section">
+      <h2 class="section__header">Gwintowanie</h2>
+
+      <form class="form js-form4">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Wielkość posuwu liniowego</legend>
+          <div class="form__container">
+            <label class="label">
+              <span class="labelInnerText"> n [obr/min] : </span><input type="number" min="1" step="1"
+                placeholder=" obroty wrzeciona " required class="label__input js-rotationInput4">
+            </label>
+            <label class="label" for="tapDiameter">
+              <span class="labelInnerText"> Średnica narzędzia [mm] : </span>
+              <select class="form__select" name="tapDiameter" id="tapDiameter">
+              </select>
+            </label>
+            <label class="label" for="pitch">
+              <span class="labelInnerText"> Skok gwintu [mm] : </span>
+              <select class="form__select" name="pitch" id="pitch">
+              </select>
+            </label>
+            <label class="label">
+              <span class="labelInnerText"> f [mm/min] : </span><input readonly placeholder=" wynik "
+                class="label__input js-feedResult4">
             </label>
           </div>
           <div class="form__buttons">

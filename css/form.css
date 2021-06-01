@@ -22,3 +22,8 @@
     justify-content: center;
     gap: 10px;
 }
+
+.form__select {
+    padding: 4px;
+    border-radius: 5px;
+}
