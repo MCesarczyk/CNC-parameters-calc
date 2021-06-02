@@ -1,6 +1,6 @@
 {
     const welcome = () => {
-        console.log("Welcome, how are you? :)");
+        console.log("Hello, programmer, how are you? :)");
     };
 
     const form1equation = () => {
@@ -58,25 +58,53 @@
         feedResult.value = feedElement;
     };
 
-    const diameterTable = [
+    const tapDiameterTable = [
         { id: 0, diameter: "", pitch: "" },
-        { id: 1, diameter: 3, pitch: 0.5 },
-        { id: 2, diameter: 4, pitch: 0.7 },
-        { id: 3, diameter: 5, pitch: 0.8 },
-        { id: 4, diameter: 6, pitch: 1 },
-        { id: 5, diameter: 8, pitch: 1.25 },
-        { id: 6, diameter: 10, pitch: 1.5 },
-        { id: 7, diameter: 12, pitch: 1.75 },
-        { id: 8, diameter: 16, pitch: 2 },
-        { id: 9, diameter: 20, pitch: 2.5 },
-        { id: 10, diameter: 24, pitch: 3 },
-        { id: 11, diameter: 30, pitch: 3.5 },
-        { id: 12, diameter: 36, pitch: 4 }
-    ];
+        { id: 1, diameter: 1, pitch: 0.25 },
+        { id: 2, diameter: 1.1, pitch: 0.25 },
+        { id: 3, diameter: 1.2, pitch: 0.25 },
+        { id: 4, diameter: 1.4, pitch: 0.3 },
+        { id: 5, diameter: 1.6, pitch: 0.35 },
+        { id: 6, diameter: 1.8, pitch: 0.35 },
+        { id: 7, diameter: 2, pitch: 0.4 },
+        { id: 8, diameter: 2.2, pitch: 0.45 },
+        { id: 9, diameter: 2.5, pitch: 0.45 },
+        { id: 10, diameter: 3, pitch: 0.5 },
+        { id: 11, diameter: 3.5, pitch: 0.6 },
+        { id: 12, diameter: 4, pitch: 0.7 },
+        { id: 13, diameter: 4.5, pitch: 0.75 },
+        { id: 14, diameter: 5, pitch: 0.8 },
+        { id: 15, diameter: 6, pitch: 1 },
+        { id: 16, diameter: 7, pitch: 1 },
+        { id: 17, diameter: 8, pitch: 1.25 },
+        { id: 18, diameter: 9, pitch: 1.25 },
+        { id: 19, diameter: 10, pitch: 1.5 },
+        { id: 20, diameter: 11, pitch: 1.5 },
+        { id: 21, diameter: 12, pitch: 1.75 },
+        { id: 22, diameter: 14, pitch: 2 },
+        { id: 23, diameter: 16, pitch: 2 },
+        { id: 24, diameter: 18, pitch: 2.5 },
+        { id: 25, diameter: 20, pitch: 2.5 },
+        { id: 26, diameter: 22, pitch: 2.5 },
+        { id: 27, diameter: 24, pitch: 3 },
+        { id: 28, diameter: 27, pitch: 3 },
+        { id: 29, diameter: 30, pitch: 3.5 },
+        { id: 30, diameter: 33, pitch: 3.5 },
+        { id: 31, diameter: 36, pitch: 4 },
+        { id: 32, diameter: 39, pitch: 4 },
+        { id: 33, diameter: 42, pitch: 4.5 },
+        { id: 34, diameter: 45, pitch: 4.5 },
+        { id: 35, diameter: 48, pitch: 5 },
+        { id: 36, diameter: 52, pitch: 5 },
+        { id: 37, diameter: 56, pitch: 5.5 },
+        { id: 38, diameter: 60, pitch: 5.5 },
+        { id: 39, diameter: 64, pitch: 6 },
+        { id: 40, diameter: 68, pitch: 6 },
+        ];
 
     const createTapDiameterList = () => {
         const optionList = document.querySelector(".js-tapDiameter").options;
-        diameterTable.forEach(option =>
+        tapDiameterTable.forEach(option =>
             optionList.add(
                 new Option(option.diameter, option.pitch)
             )
@@ -87,7 +115,7 @@
         const rotationInput = document.querySelector(".js-rotationInput4").value;
         const diameter = document.querySelector(".js-tapDiameter").value;
         const pitch = document.querySelector(".js-pitch").value;
-        if (!diameter > 0) {
+        if (diameter === "") {
             return feedElement = "wybierz średnicę";
         }
         return feedElement = rotationInput * pitch;
