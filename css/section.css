@@ -1,3 +1,7 @@
+.section--hidden {
+    display: none;
+}
+
 .section__header {
     color: #fff;
     background-color: #1e3246;

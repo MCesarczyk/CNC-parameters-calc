@@ -58,35 +58,45 @@
         feedResult.value = feedElement;
     };
 
-    const diameterTable = ["-", 3, 4, 5, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 27, 30, 33, 36, 39, 42, 45, 48];
-    const pitchTable = ["-", 0.5, 0.7, 0.8, 1, 1.25, 1.5, 1.75, 2, 2.5, 3, 3.5, 4, 4.5, 5];
-
+    const diameterTable = [
+        { id: 0, diameter: "", pitch: "" },
+        { id: 1, diameter: 3, pitch: 0.5 },
+        { id: 2, diameter: 4, pitch: 0.7 },
+        { id: 3, diameter: 5, pitch: 0.8 },
+        { id: 4, diameter: 6, pitch: 1 },
+        { id: 5, diameter: 8, pitch: 1.25 },
+        { id: 6, diameter: 10, pitch: 1.5 },
+        { id: 7, diameter: 12, pitch: 1.75 },
+        { id: 8, diameter: 16, pitch: 2 },
+        { id: 9, diameter: 20, pitch: 2.5 },
+        { id: 10, diameter: 24, pitch: 3 },
+        { id: 11, diameter: 30, pitch: 3.5 },
+        { id: 12, diameter: 36, pitch: 4 }
+    ];
 
     const createTapDiameterList = () => {
         const optionList = document.querySelector(".js-tapDiameter").options;
         diameterTable.forEach(option =>
             optionList.add(
-                new Option(option)
-            )
-        );
-    };
-
-    const createPitchList = () => {
-        const optionList = document.querySelector(".js-pitch").options;
-        pitchTable.forEach(option =>
-            optionList.add(
-                new Option(option)
+                new Option(option.diameter, option.pitch)
             )
         );
     };
 
     const form4equation = () => {
         const rotationInput = document.querySelector(".js-rotationInput4").value;
+        const diameter = document.querySelector(".js-tapDiameter").value;
         const pitch = document.querySelector(".js-pitch").value;
-        if (pitch === "-") {
-            return feedElement = "wybierz skok";
+        if (!diameter > 0) {
+            return feedElement = "wybierz średnicę";
         }
         return feedElement = rotationInput * pitch;
+    };
+
+    const form4input = () => {
+        const optionChosen = document.querySelector(".js-tapDiameter");
+        const pitchInput = document.querySelector(".js-pitch");
+        pitchInput.value = parseFloat(optionChosen.value);
     };
 
     const form4submit = (event) => {
@@ -98,7 +108,6 @@
     const init = () => {
         welcome();
         createTapDiameterList();
-        createPitchList();
         const form1 = document.querySelector(".js-form1");
         const form2 = document.querySelector(".js-form2");
         const form3 = document.querySelector(".js-form3");
@@ -107,6 +116,7 @@
         form2.addEventListener("submit", form2submit);
         form3.addEventListener("input", form3input);
         form3.addEventListener("submit", form3submit);
+        form4.addEventListener("input", form4input);
         form4.addEventListener("submit", form4submit);
     };
 
