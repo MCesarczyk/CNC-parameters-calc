@@ -4,9 +4,9 @@
     };
 
     const form1equation = () => {
-        const diameterInput = document.querySelector(".js-diameterInput1");
-        const rotationInput = document.querySelector(".js-rotationInput1");
-        return speedElement = Math.PI * diameterInput.value * rotationInput.value / 1000;
+        const diameter = document.querySelector(".js-diameterInput1").value;
+        const rotation = document.querySelector(".js-rotationInput1").value;
+        return speedElement = Math.PI * diameter * rotation / 1000;
     };
 
     const form1submit = (event) => {
@@ -17,9 +17,9 @@
     };
 
     const form2equation = () => {
-        const diameterInput = document.querySelector(".js-diameterInput2");
-        const speedInput = document.querySelector(".js-speedInput2");
-        return rotElement = speedInput.value * 1000 / Math.PI / diameterInput.value;
+        const diameter = document.querySelector(".js-diameterInput2").value;
+        const speed = document.querySelector(".js-speedInput2").value;
+        return rotElement = speed * 1000 / Math.PI / diameter;
     };
 
     const form2submit = (event) => {
@@ -30,7 +30,7 @@
     };
 
     const form3input = (event) => {
-        const rotationInput = document.querySelector(".js-rotationInput3");
+        const rotation = document.querySelector(".js-rotationInput3").value;
         const feedForRev = document.querySelector(".js-feedForRev");
         const feedForTooth = document.querySelector(".js-feedForTooth");
         const toothNumber = document.querySelector(".js-toothNumber");
@@ -41,14 +41,14 @@
             feedForRev.value = "";
             feedForTooth.disabled = false;
             toothNumber.disabled = false;
-            return feedElement = rotationInput.value * feedForTooth.value * toothNumber.value;
+            return feedElement = rotation * feedForTooth.value * toothNumber.value;
         } if (rev.checked) {
             feedForRev.disabled = false;
             feedForTooth.disabled = true;
             feedForTooth.value = "";
             toothNumber.disabled = true;
             toothNumber.value = "";
-            return feedElement = rotationInput.value * feedForRev.value;
+            return feedElement = rotation * feedForRev.value;
         };
     };
 
@@ -100,7 +100,7 @@
         { id: 38, diameter: 60, pitch: 5.5 },
         { id: 39, diameter: 64, pitch: 6 },
         { id: 40, diameter: 68, pitch: 6 },
-        ];
+    ];
 
     const createTapDiameterList = () => {
         const optionList = document.querySelector(".js-tapDiameter").options;
@@ -111,14 +111,24 @@
         );
     };
 
+    const form4insertData = () => {
+        const rotationCalculated = document.querySelector(".js-rotationResult2").value;
+        const rotationInput = document.querySelector(".js-rotationInput4");
+        if (rotationCalculated === "") {
+            rotationInput.placeholder = "nie podano wartości";
+        } else {
+            rotationInput.value = rotationCalculated;
+        }
+    };
+
     const form4equation = () => {
-        const rotationInput = document.querySelector(".js-rotationInput4").value;
+        const rotation = document.querySelector(".js-rotationInput4").value;
         const diameter = document.querySelector(".js-tapDiameter").value;
         const pitch = document.querySelector(".js-pitch").value;
         if (diameter === "") {
             return feedElement = "wybierz średnicę";
         }
-        return feedElement = rotationInput * pitch;
+        return feedElement = rotation * pitch;
     };
 
     const form4input = () => {
@@ -131,6 +141,11 @@
         event.preventDefault();
         form4equation();
         document.querySelector(".js-feedResult4").value = feedElement;
+    };
+
+    const form4reset = () => {
+        const rotationInput = document.querySelector(".js-rotationInput4");
+        rotationInput.placeholder = "obroty wrzeciona";
     };
 
     const init = () => {
@@ -146,6 +161,9 @@
         form3.addEventListener("submit", form3submit);
         form4.addEventListener("input", form4input);
         form4.addEventListener("submit", form4submit);
+        form4.addEventListener("reset", form4reset);
+        const insertRotation = document.querySelector(".js-insertRotation4");
+        insertRotation.addEventListener("click", form4insertData);
     };
 
     init();
