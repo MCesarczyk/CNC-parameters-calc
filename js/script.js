@@ -58,7 +58,20 @@
         feedResult.value = feedElement;
     };
 
-    const tapDiameterTable = [
+    const form4equation = () => {
+        const diameter = document.querySelector(".js-diameterInput4").value;
+        const speed = document.querySelector(".js-speedInput4").value;
+        return rotElement = speed * 1000 / Math.PI / diameter;
+    };
+
+    const form4submit = (event) => {
+        event.preventDefault();
+        form4equation();
+        const rotationResult = document.querySelector(".js-rotationResult4");
+        rotationResult.value = rotElement.toFixed(2);
+    };
+
+const tapDiameterTable = [
         { id: 0, diameter: "", pitch: "" },
         { id: 1, diameter: 1, pitch: 0.25 },
         { id: 2, diameter: 1.1, pitch: 0.25 },
@@ -111,9 +124,9 @@
         );
     };
 
-    const form4insertData = () => {
-        const rotationCalculated = document.querySelector(".js-rotationResult2").value;
-        const rotationInput = document.querySelector(".js-rotationInput4");
+    const form5insertData = () => {
+        const rotationCalculated = document.querySelector(".js-rotationResult4").value;
+        const rotationInput = document.querySelector(".js-rotationInput5");
         if (rotationCalculated === "") {
             rotationInput.placeholder = "nie podano wartości";
         } else {
@@ -121,8 +134,8 @@
         }
     };
 
-    const form4equation = () => {
-        const rotation = document.querySelector(".js-rotationInput4").value;
+    const form5equation = () => {
+        const rotation = document.querySelector(".js-rotationInput5").value;
         const diameter = document.querySelector(".js-tapDiameter").value;
         const pitch = document.querySelector(".js-pitch").value;
         if (diameter === "") {
@@ -131,20 +144,20 @@
         return feedElement = rotation * pitch;
     };
 
-    const form4input = () => {
+    const form5input = () => {
         const optionChosen = document.querySelector(".js-tapDiameter");
         const pitchInput = document.querySelector(".js-pitch");
         pitchInput.value = parseFloat(optionChosen.value);
     };
 
-    const form4submit = (event) => {
+    const form5submit = (event) => {
         event.preventDefault();
-        form4equation();
-        document.querySelector(".js-feedResult4").value = feedElement;
+        form5equation();
+        document.querySelector(".js-feedResult5").value = feedElement;
     };
 
-    const form4reset = () => {
-        const rotationInput = document.querySelector(".js-rotationInput4");
+    const form5reset = () => {
+        const rotationInput = document.querySelector(".js-rotationInput5");
         rotationInput.placeholder = "obroty wrzeciona";
     };
 
@@ -155,15 +168,17 @@
         const form2 = document.querySelector(".js-form2");
         const form3 = document.querySelector(".js-form3");
         const form4 = document.querySelector(".js-form4");
+        const form5 = document.querySelector(".js-form5");
         form1.addEventListener("submit", form1submit);
         form2.addEventListener("submit", form2submit);
         form3.addEventListener("input", form3input);
         form3.addEventListener("submit", form3submit);
-        form4.addEventListener("input", form4input);
         form4.addEventListener("submit", form4submit);
-        form4.addEventListener("reset", form4reset);
-        const insertRotation = document.querySelector(".js-insertRotation4");
-        insertRotation.addEventListener("click", form4insertData);
+        form5.addEventListener("input", form5input);
+        form5.addEventListener("submit", form5submit);
+        form5.addEventListener("reset", form5reset);
+        const insertRotation = document.querySelector(".js-insertRotation5");
+        insertRotation.addEventListener("click", form5insertData);
     };
 
     init();
