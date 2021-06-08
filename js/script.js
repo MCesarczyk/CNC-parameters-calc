@@ -71,7 +71,7 @@
         rotationResult.value = rotElement.toFixed(2);
     };
 
-const tapDiameterTable = [
+    const tapDiameterTable = [
         { id: 0, diameter: "", pitch: "" },
         { id: 1, diameter: 1, pitch: 0.25 },
         { id: 2, diameter: 1.1, pitch: 0.25 },
@@ -126,15 +126,14 @@ const tapDiameterTable = [
 
     const form5equation = () => {
         const rotation = document.querySelector(".js-rotationInput5").value;
-        const diameter = document.querySelector(".js-tapDiameter").value;
         const pitch = document.querySelector(".js-pitch").value;
         return feedElement = rotation * pitch;
     };
 
     const form5input = () => {
-        const optionChosen = document.querySelector(".js-tapDiameter");
-        const pitchInput = document.querySelector(".js-pitch");
-        pitchInput.value = parseFloat(optionChosen.value);
+        const diameterSelector = document.querySelector(".js-tapDiameter");
+        const pitch = document.querySelector(".js-pitch");
+        pitch.value = parseFloat(diameterSelector.value);
     };
 
     const form5submit = (event) => {
