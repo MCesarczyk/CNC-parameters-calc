@@ -11,12 +11,12 @@
     }
 }
 
-.labelInnerText {
+.label__innerText {
     text-align: right;
 }
 
 @media (max-width: 480px) {
-    .labelInnerText {
+    .label__innerText {
         text-align: center;
     }
 }
@@ -47,3 +47,20 @@
 .label__input:disabled {
     background-color: #ddd;
 }
+
+.label__output {
+    min-width: 200px;
+    min-height: 30px;
+    line-height: 1.15;
+    border: solid 1px #1e3246;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .label__output {
+        width: 100%;
+    }
+}
+
