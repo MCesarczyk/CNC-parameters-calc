@@ -178,17 +178,14 @@
               <span class="label__innerText"> n [obr/min] : </span><input type="number" min="0.01" step="0.01"
                 placeholder=" obroty wrzeciona " required class="label__input js-rotationInput5">
             </label>
-            <button class="button button--auxiliary js-insertRotation5" type="button">
-              Wstaw z sekcji powyżej
-            </button>
             <label class="label" for="tapDiameter">
               <span class="label__innerText"> Średnica narzędzia [mm] : </span>
-              <select class="form__select js-tapDiameter" name="tapDiameter">
+              <select class="form__select js-tapDiameter" name="tapDiameter" required>
               </select>
             </label>
             <label class="label" for="pitch">
               <span class="label__innerText"> Skok gwintu [mm] : </span>
-              <input class="label__input js-pitch" name="pitch" placeholder="skok gwintu" readonly>
+              <input class="label__input js-pitch" name="pitch" readonly placeholder="skok gwintu">
             </label>
             <label class="label">
               <span class="label__innerText"> f [mm/min] : </span><input readonly placeholder=" wynik "

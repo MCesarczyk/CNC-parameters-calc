@@ -124,23 +124,10 @@ const tapDiameterTable = [
         );
     };
 
-    const form5insertData = () => {
-        const rotationCalculated = document.querySelector(".js-rotationResult4").value;
-        const rotationInput = document.querySelector(".js-rotationInput5");
-        if (rotationCalculated === "") {
-            rotationInput.placeholder = "nie podano wartości";
-        } else {
-            rotationInput.value = rotationCalculated;
-        }
-    };
-
     const form5equation = () => {
         const rotation = document.querySelector(".js-rotationInput5").value;
         const diameter = document.querySelector(".js-tapDiameter").value;
         const pitch = document.querySelector(".js-pitch").value;
-        if (diameter === "") {
-            return feedElement = "wybierz średnicę";
-        }
         return feedElement = rotation * pitch;
     };
 
@@ -177,8 +164,6 @@ const tapDiameterTable = [
         form5.addEventListener("input", form5input);
         form5.addEventListener("submit", form5submit);
         form5.addEventListener("reset", form5reset);
-        const insertRotation = document.querySelector(".js-insertRotation5");
-        insertRotation.addEventListener("click", form5insertData);
     };
 
     init();
